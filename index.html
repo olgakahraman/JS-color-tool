@@ -5,35 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS color tool</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com"> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <div class="container">
+      <h1 class="title">Color Lighten/Darken</h1>
 
-    <h1 class="title">Color Lighten/Darken</h1>
-    
-    <label for="hex">Color (Hex)</label>
-    <input type="text" name="hex" id="hexInput" placeholder="#000000" />
-    <label for="slider" id="sliderText">0%</label>
-    <input
-      type="range"
-      min="0"
-      max="100"
-      value="0"
-      class="slider"
-      id="slider"
-      name="slider"
-   />
-    <p>Input Color</p>
-    <div id="inputColor" class="box"></div>
-    <p id="alteredColorText">Altered Color</p>
-    <div id="alteredColor" class="box"></div>
-</div>
+      <label for="hex">Color (Hex)</label>
+      <input type="text" name="hex" id="hexInput" placeholder="#000000" />
+
+      <div class="toggle">
+        <p id="lightenText" class="toggle-text">Lighten</p>
+        <div id="toggleBtn" class="toggle-btn">
+          <div class="inner-circle"></div>
+        </div>
+        <p id="darkenText" class="toggle-text">Darken</p>
+      </div>
+
+      <label for="slider" id="sliderText">0%</label>
+      <input
+        type="range"
+        min="0"
+        max="100"
+        value="0"
+        class="slider"
+        id="slider"
+        name="slider"
+      />
+      <p>Input Color</p>
+      <div id="inputColor" class="box"></div>
+      <p id="alteredColorText">Altered Color</p>
+      <div id="alteredColor" class="box"></div>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>
