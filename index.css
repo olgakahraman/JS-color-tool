@@ -60,7 +60,7 @@ input[type="text"]{
     height: 30px;
     border-radius: 50%;
     background-color: white;
-    transition: all 250ms;
+    transition: all 250ms ease-in-out;
 }
 .toggle-btn.toggled > .inner-circle {
     transform: translateX(30px);

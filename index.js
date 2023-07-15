@@ -5,6 +5,23 @@ const sliderText = document.querySelector("#sliderText");
 const alteredColor = document.querySelector("#alteredColor");
 const alteredColorText = document.querySelector("#alteredColorText");
 
+const lightenText = document.querySelector("#lightenText");
+const darkenText = document.querySelector("#darkenText");
+const toggleBtn = document.querySelector("#toggleBtn");
+
+toggleBtn.addEventListener("click", () => {
+  if (toggleBtn.classList.contains("toggled")) {
+    toggleBtn.classList.remove("toggled");
+    lightenText.classList.remove("unselected");
+    darkenText.classList.add("unselected");
+  } else {
+    toggleBtn.classList.add("toggled");
+    lightenText.classList.add("unselected");
+    darkenText.classList.remove("unselected");
+  }
+});
+
+
 
 hexInput.addEventListener("keyup", () => {
 
@@ -76,7 +93,7 @@ alterColor("fff", 10)
 slider.addEventListener("input", () => {
 
     if(!isValidHex(hexInput.value)) return;
-    
+
     sliderText.textContent = `${slider.value}%`;
 
     const alteredHex = alterColor(hexInput.value, slider.value);
